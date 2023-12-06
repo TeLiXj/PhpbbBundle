@@ -1,19 +1,19 @@
 services:
-    phpBB\SessionsAuthBundle\EventListener\TablePrefixListener:
+    TeLiXj\PhpbbBundle\EventListener\TablePrefixListener:
         public: false
         arguments: ["%phpbb.database.prefix%"]
         tags:
             - { name: doctrine.event_listener, event: loadClassMetadata }
 
-    phpBB\SessionsAuthBundle\Security\PhpbbSessionAuthenticator:
+    TeLiXj\PhpbbBundle\Security\PhpbbSessionAuthenticator:
         public: false
         arguments:
             - "%phpbb.session.cookie_name%"
             - "%phpbb.session.login_page%"
             - "%phpbb.session.force_login%"
-            - "@phpBB\\SessionsAuthBundle\\Security\\PhpbbUserProvider"
+            - "@TeLiXj\\PhpbbBundle\\Security\\PhpbbUserProvider"
 
-    phpBB\SessionsAuthBundle\Security\PhpbbUserProvider:
+    TeLiXj\PhpbbBundle\Security\PhpbbUserProvider:
         public: false
         arguments: ["@doctrine", "%phpbb.database.entity_manager%"]
         calls: [[setRoles, ["%phpbb.roles%"]]]

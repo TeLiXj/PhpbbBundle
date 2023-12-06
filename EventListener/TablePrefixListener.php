@@ -3,7 +3,7 @@ namespace TeLiXj\PhpbbBundle\EventListener;
 
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
-use phpBB\SessionsAuthBundle\Entity as Entity;
+use TeLiXj\PhpbbBundle\Entity as Entity;
 
 /**
  * The table prefix for the users table is defined within the configuration for this bundle.

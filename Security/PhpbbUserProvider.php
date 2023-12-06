@@ -5,11 +5,11 @@ namespace TeLiXj\PhpbbBundle\Security;
 use Exception;
 use Doctrine\Bundle\DoctrineBundle\Registry;
 use Doctrine\ORM\EntityManagerInterface;
-use phpBB\SessionsAuthBundle\Entity\Session;
-use phpBB\SessionsAuthBundle\Entity\SessionKey;
-use phpBB\SessionsAuthBundle\Entity\User;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
+use TeLiXj\PhpbbBundle\Entity\Session;
+use TeLiXj\PhpbbBundle\Entity\SessionKey;
+use TeLiXj\PhpbbBundle\Entity\User;
 
 class PhpbbUserProvider implements UserProviderInterface
 {
