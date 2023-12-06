@@ -1,11 +1,6 @@
 <?php
-/**
- * @copyright (c) phpBB Limited <https://www.phpbb.com>
- * @license MIT
- * @author Unknown Bliss
- */
 
-namespace phpBB\SessionsAuthBundle\DependencyInjection;
+namespace TeLiXj\PhpbbBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -22,8 +17,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('phpbb_sessions_auth');
-        $rootNode = method_exists($treeBuilder, 'getRootNode') ? $treeBuilder->getRootNode() : $treeBuilder->root('phpbb_sessions_auth');
+        $treeBuilder = new TreeBuilder('phpbb');
+        $rootNode = method_exists($treeBuilder, 'getRootNode') ? $treeBuilder->getRootNode() : $treeBuilder->root('phpbb');
         $rootNode
             ->children()
                 ->arrayNode('session')->isRequired()

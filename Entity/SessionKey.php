@@ -1,6 +1,6 @@
 <?php
 
-namespace phpBB\SessionsAuthBundle\Entity;
+namespace TeLiXj\PhpbbBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

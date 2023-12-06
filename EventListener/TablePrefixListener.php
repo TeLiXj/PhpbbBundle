@@ -1,10 +1,5 @@
 <?php
-/**
- * @copyright (c) phpBB Limited <https://www.phpbb.com>
- * @license MIT
- */
-
-namespace phpBB\SessionsAuthBundle\EventListener;
+namespace TeLiXj\PhpbbBundle\EventListener;
 
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;

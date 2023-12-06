@@ -1,8 +1,6 @@
-# phpBB Sessions Auth Bundle
+# phpBB Bundle
 
-This allows you to use phpBB as a authentication provider and share its sessions.
-
-It was originally developed for use on the new phpBB Symfony Website but was then open sourced.
+Symfony integration with phpBB. Use phpBB as a authentication provider and share its sessions.
 
 
 ## Configuration
@@ -46,12 +44,12 @@ doctrine:
             forum:
                 connection: forum
                 mappings:
-                    PhpbbSessionsAuthBundle: ~
+                    PhpbbBundle: ~
 ```
 
-Then add the bundle configuration to your config file (`app/config/config.yml` in Symfony < 4 or `config/packages/phpbb_sessions_auth.yaml` in Symfony >= 4)
+Then add the bundle configuration to `config/packages/phpbb.yaml`
 ```yaml
-phpbb_sessions_auth:
+phpbb:
     session:
         cookie_name: "phpbb_foo" # must match your forum admin cookie name configuration
         login_page: "ucp.php?mode=login" # your login page, by default phpbb login page but you can use a custom page
@@ -69,7 +67,7 @@ phpbb_sessions_auth:
         8: administrator #you can assing same application roles to various phpBB groups
 ```
 
-Update your security file file to match this  (`app/config/security.yml` in Symfony < 4 or `config/packages/security.yaml` in Symfony >= 4):
+Update your `config/packages/security.yaml` to match this:
 ```yaml
 security:
     enable_authenticator_manager: true
@@ -78,7 +76,7 @@ security:
             pattern: ^/
             stateless: true # stateless should be set to true, or your symfony user may be stored in the session even if you logged out from the phpbb instance
             custom_authenticators:
-                - phpBB\SessionsAuthBundle\Security\PhpbbSessionAuthenticator
+                - TeLiXj\PhpbbBundle\Security\PhpbbSessionAuthenticator
 ```
 
 And to use remember me function you must edit the `ucp.php` in your forum to enable the redirection after detect a correct session key.

@@ -1,10 +1,5 @@
 <?php
-/**
- * @copyright (c) phpBB Limited <https://www.phpbb.com>
- * @license MIT
- */
-
-namespace phpBB\SessionsAuthBundle\Entity;
+namespace TeLiXj\PhpbbBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

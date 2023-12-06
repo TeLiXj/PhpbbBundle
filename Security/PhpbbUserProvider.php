@@ -1,11 +1,6 @@
 <?php
 
-/**
- * @copyright (c) phpBB Limited <https://www.phpbb.com>
- * @license MIT
- */
-
-namespace phpBB\SessionsAuthBundle\Security;
+namespace TeLiXj\PhpbbBundle\Security;
 
 use Exception;
 use Doctrine\Bundle\DoctrineBundle\Registry;
