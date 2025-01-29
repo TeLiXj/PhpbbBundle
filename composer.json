@@ -13,8 +13,8 @@
   "authors": [{"name": "TeLiXj", "email": "telixj@gmail.com"}],
   "require": {
     "php": "^8.2",
-    "symfony/security-bundle": "^5.4|^6.0",
-    "doctrine/orm": "^2.5"
+    "symfony/security-bundle": "^5.4|^6.0|^7.0",
+    "doctrine/orm": "^2.5|^3.0"
   },
   "minimum-stability": "dev",
   "autoload": {"psr-4": {"TeLiXj\\PhpbbBundle\\": ""}}
