@@ -37,7 +37,7 @@ class PhpbbSessionAuthenticator extends AbstractAuthenticator
             'user' => $request->cookies->get($this->cookieName.'_u'),
         ];
 
-        return new SelfValidatingPassport(new UserBadge($credentials['user'], function ($user) use ($credentials) {
+        return new SelfValidatingPassport(new UserBadge($credentials['user'] ?: self::ANONYMOUS_USER_ID, function ($user) use ($credentials) {
             if (!$user || self::ANONYMOUS_USER_ID == $user) {
                 return null;
             }
