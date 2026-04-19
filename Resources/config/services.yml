@@ -5,6 +5,12 @@ services:
         tags:
             - { name: doctrine.event_listener, event: loadClassMetadata }
 
+    TeLiXj\PhpbbBundle\EventListener\UnsignedIdListener:
+        public: false
+        arguments: ["%phpbb.database.prefix%"]
+        tags:
+            - { name: doctrine.event_listener, event: loadClassMetadata }
+
     TeLiXj\PhpbbBundle\Security\PhpbbSessionAuthenticator:
         public: false
         arguments:
