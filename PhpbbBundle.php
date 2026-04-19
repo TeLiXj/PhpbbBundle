@@ -1,6 +1,5 @@
 <?php
 
-
 namespace TeLiXj\PhpbbBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;

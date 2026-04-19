@@ -1,4 +1,5 @@
 <?php
+
 namespace TeLiXj\PhpbbBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;

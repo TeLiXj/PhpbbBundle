@@ -1,6 +1,5 @@
 <?php
 
-
 namespace TeLiXj\PhpbbBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
