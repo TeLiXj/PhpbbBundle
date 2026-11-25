@@ -3,7 +3,7 @@
   "description": "Symfony integration with phpBB",
   "keywords": [
     "symfony",
-    "intergration",
+    "integration",
     "phpbb",
     "authentication",
     "sessions"
@@ -12,10 +12,9 @@
   "license": "GPL-3.0-or-later",
   "authors": [{"name": "TeLiXj", "email": "telixj@gmail.com"}],
   "require": {
-    "php": "^8.2",
-    "symfony/security-bundle": "^5.4|^6.0|^7.0",
+    "php": "^8.3",
+    "symfony/security-bundle": "^6.0|^7.0|^8.0",
     "doctrine/orm": "^2.5|^3.0"
   },
-  "minimum-stability": "dev",
   "autoload": {"psr-4": {"TeLiXj\\PhpbbBundle\\": ""}}
 }
