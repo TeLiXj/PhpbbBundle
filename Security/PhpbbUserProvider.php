@@ -5,6 +5,7 @@ namespace TeLiXj\PhpbbBundle\Security;
 use Exception;
 use Doctrine\Bundle\DoctrineBundle\Registry;
 use Doctrine\ORM\EntityManagerInterface;
+use SortDirection;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use TeLiXj\PhpbbBundle\Entity\Session;
@@ -37,7 +38,7 @@ class PhpbbUserProvider implements UserProviderInterface
             ->andWhere('s.user = :user')
             ->setParameter('id', $sessionId)
             ->setParameter('user', $userId)
-            ->orderBy('s.time', 'DESC')
+            ->orderBy('s.time', SortDirection::Descending)
             ->setMaxResults(1)
             ->getQuery()
             ->getOneOrNullResult();
