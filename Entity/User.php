@@ -2,6 +2,7 @@
 
 namespace TeLiXj\PhpbbBundle\Entity;
 
+use Deprecated;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -1056,6 +1057,7 @@ class User implements UserInterface
         return null;
     }
 
+    #[Deprecated]
     public function eraseCredentials(): void
     {
     }
